@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calgary Transit</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+  </head
+  <body>
+    <header class="red-header">
+        <h1 class="header-logo-wrapper">
+          <a class="header__site-link" title="Home" href="http://www.nba.com"></a>
+        </h1>
+      <button type="button" id="burger">
+      </button>
+      <nav>
+        <ul class="nav-horizontal-links">
+          <li><a href="">Plan a Trip</a></li>
+          <li><a href="">Schedules & Maps</a></li>
+          <li><a href="">Service Updates</a></li>
+          <li><a href="">Fares & Passes</a></li>
+          <li><a href="">Getting Around</a></li>
+        </ul>
+      </nav>
+      <section id="vertical-collapsible-menu">
+        <h2>
+          <a href="">Plan a trip</a>
+          <form class="plan-a-trip">
+          </form>
+        </h2>
+      </section>
+    </header>
+
+
+
+
+<!--
+    <header class="header-logo drawer-header slide">
+      <div class="header__name-and-slogan" id="name-and-slogan">
+        <h1 class="header__site-name" id="site-name">
+            <a href="/" title="Home" class="header__site-link icon-logo" rel="home"><span>Calgary Transit</span></a>
+          </h1>
+      </div>
+      <button type="button" id="navToggle" class="burger icon-burger"></button>
+    </header>
+
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+    </footer>
+  </body>
+</html>
