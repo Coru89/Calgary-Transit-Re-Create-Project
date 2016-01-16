@@ -1,0 +1,328 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+   html, body, div, h1 {
+     margin: 0;
+     margin:0;
+     padding: 0;
+   }
+
+   .red-header {
+     background-color: #b83a3f;
+     height: 60px;
+     display: block;
+     box-shadow: 1px 0 5px 0 rgba(0,0,0,.8);
+   }
+
+
+   .header__site-link {
+   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiICAgdmlld0JveD0iMCAwIDI2MCA0MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjYwIDQwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMjYwIiBoZWlnaHQ9IjQwIj48Zz4gIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yMi4wNiwzMC4zNGMtMi4wOCwwLjQ5LTQuMzEsMC44OS02LjQ3LDAuODlDNi4zOSwzMS4yMywwLDI2LjYzLDAsMTcuMDNDMCw3LjMsNS45NCwxLjg1LDE1LjU5LDEuODUgICAgYzEuODcsMCw0LjM1LDAuMzcsNi40MywxLjE4bC0wLjQxLDQuOGMtMi4xNi0xLjIyLTQuMTEtMS41MS02LjE1LTEuNTFjLTUuODYsMC05LjUyLDQuNDgtOS41MiwxMC4zYzAsNS43OCwzLjU4LDEwLjEzLDkuNjQsMTAuMTMgICAgYzIuMjQsMCw0Ljg4LTAuNDksNi4yMy0xLjE4TDIyLjA2LDMwLjM0Ii8+ICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjUuODYsMTAuODhjMi4xMi0wLjk4LDQuOTYtMS41OSw3LjI4LTEuNTljNi4zOSwwLDkuMDMsMi42NCw5LjAzLDguODN2Mi42OWMwLDIuMTIsMC4wNCwzLjcsMC4wOCw1LjI1ICAgIGMwLjA0LDEuNTksMC4xMiwzLjA1LDAuMjQsNC42OGgtNC44Yy0wLjItMS4xLTAuMi0yLjQ4LTAuMjQtMy4xM2gtMC4wOGMtMS4yNiwyLjMyLTMuOTksMy42Mi02LjQ3LDMuNjIgICAgYy0zLjcsMC03LjMyLTIuMjQtNy4zMi02LjIzYzAtMy4xMywxLjUxLTQuOTYsMy41OC01Ljk4YzIuMDgtMS4wMiw0Ljc2LTEuMjIsNy4wNC0xLjIyaDMuMDFjMC0zLjM4LTEuNTEtNC41Mi00LjcyLTQuNTIgICAgYy0yLjMyLDAtNC42NCwwLjktNi40NywyLjI4TDI1Ljg2LDEwLjg4IE0zMi4yNSwyNy4yNGMxLjY3LDAsMi45Ny0wLjczLDMuODMtMS44N2MwLjg5LTEuMTgsMS4xNC0yLjY5LDEuMTQtNC4zMWgtMi4zNiAgICBjLTIuNDQsMC02LjA2LDAuNDEtNi4wNiwzLjYyQzI4Ljc5LDI2LjQ3LDMwLjMsMjcuMjQsMzIuMjUsMjcuMjR6Ii8+ICA8cmVjdCB4PSI0NS42MyIgeT0iMC4yMiIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjUuNDUiIGhlaWdodD0iMzAuNTIiLz4gIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03NC4wMiw5Ljc5djE4LjkyYzAsNS43LTIuMjgsMTEuMDctMTEuMDcsMTEuMDdjLTIuMTYsMC00LjY0LTAuMzMtNy4yNC0xLjQybDAuNDUtNC42NCAgICBjMS42NywwLjksNC4zOSwxLjgzLDYuMSwxLjgzYzYuMDIsMCw2LjMxLTQuNTIsNi4zMS04LjE0aC0wLjA4Yy0xLjAyLDEuNzktMy40NiwzLjM0LTYuNTEsMy4zNGMtNi4xOSwwLTguNTUtNC45Ni04LjU1LTEwLjU4ICAgIGMwLTUuMDUsMi42LTEwLjg2LDguODctMTAuODZjMi43NywwLDQuOTIsMC45NCw2LjQzLDMuMzRoMC4wOFY5Ljc5SDc0LjAyIE02OC41NiwyMC4wNGMwLTMuNTgtMS4zOC02LjUxLTQuNTYtNi41MSAgICBjLTMuNywwLTQuODgsMy40Mi00Ljg4LDYuNjNjMCwyLjg1LDEuNTEsNi4zNSw0LjY0LDYuMzVDNjcuMTgsMjYuNTEsNjguNTYsMjMuNTQsNjguNTYsMjAuMDR6Ii8+ICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNzguNTIsMTAuODhjMi4xMi0wLjk4LDQuOTYtMS41OSw3LjI4LTEuNTljNi4zOSwwLDkuMDMsMi42NCw5LjAzLDguODN2Mi42OWMwLDIuMTIsMC4wNCwzLjcsMC4wOCw1LjI1ICAgIGMwLjA0LDEuNTksMC4xMiwzLjA1LDAuMjQsNC42OGgtNC44Yy0wLjItMS4xLTAuMi0yLjQ4LTAuMjQtMy4xM2gtMC4wOGMtMS4yNiwyLjMyLTMuOTksMy42Mi02LjQ3LDMuNjIgICAgYy0zLjcsMC03LjMyLTIuMjQtNy4zMi02LjIzYzAtMy4xMywxLjUxLTQuOTYsMy41OC01Ljk4YzIuMDctMS4wMiw0Ljc2LTEuMjIsNy4wNC0xLjIyaDMuMDFjMC0zLjM4LTEuNTEtNC41Mi00LjcyLTQuNTIgICAgYy0yLjMyLDAtNC42NCwwLjktNi40NywyLjI4TDc4LjUyLDEwLjg4IE04NC45MSwyNy4yNGMxLjY3LDAsMi45Ny0wLjczLDMuODMtMS44N2MwLjg5LTEuMTgsMS4xNC0yLjY5LDEuMTQtNC4zMWgtMi4zNiAgICBjLTIuNDQsMC02LjA2LDAuNDEtNi4wNiwzLjYyQzgxLjQ1LDI2LjQ3LDgyLjk2LDI3LjI0LDg0LjkxLDI3LjI0eiIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTk4LjI5LDkuNzloNC44NHY0Ljc2aDAuMDhjMC4yNC0xLjk1LDIuNDgtNS4yNSw1Ljc0LTUuMjVjMC41MywwLDEuMSwwLDEuNjcsMC4xNnY1LjQ5ICAgIGMtMC40OS0wLjI5LTEuNDYtMC40NS0yLjQ0LTAuNDVjLTQuNDQsMC00LjQ0LDUuNTMtNC40NCw4LjU1djcuNjloLTUuNDVWOS43OSIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTEyMy4zOSwyNS4wOWgwLjA4bDUuMDUtMTUuM2g1LjU0bC03Ljg1LDIwLjc5Yy0xLjc1LDQuNjQtMy4wMSw5LjItOC43MSw5LjJjLTEuMywwLTIuNi0wLjItMy44Ny0wLjU3ICAgIGwwLjM3LTQuMDNjMC42OSwwLjI0LDEuNDYsMC4zNywyLjgxLDAuMzdjMi4yLDAsMy41NC0xLjUxLDMuNTQtMy43NGwtOC4wMi0yMi4wMmg2LjAyTDEyMy4zOSwyNS4wOSIvPiAgPHBvbHlsaW5lIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTUwLjg2LDYuODIgMTQyLjcyLDYuODIgMTQyLjcyLDIuMzQgMTY0LjY5LDIuMzQgMTY0LjY5LDYuODIgMTU2LjU2LDYuODIgMTU2LjU2LDMwLjc0ICAgICAxNTAuODYsMzAuNzQgMTUwLjg2LDYuODIgICIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE2My4wOCw5Ljc5aDQuODR2NC43NkgxNjhjMC4yNC0xLjk1LDIuNDgtNS4yNSw1Ljc0LTUuMjVjMC41MywwLDEuMSwwLDEuNjcsMC4xNnY1LjQ5ICAgIGMtMC40OS0wLjI5LTEuNDctMC40NS0yLjQ0LTAuNDVjLTQuNDQsMC00LjQ0LDUuNTMtNC40NCw4LjU1djcuNjloLTUuNDVWOS43OSIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE3Ny45OCwxMC44OGMyLjEyLTAuOTgsNC45Ni0xLjU5LDcuMjgtMS41OWM2LjM5LDAsOS4wMywyLjY0LDkuMDMsOC44M3YyLjY5YzAsMi4xMiwwLjA0LDMuNywwLjA4LDUuMjUgICAgYzAuMDQsMS41OSwwLjEyLDMuMDUsMC4yNSw0LjY4aC00LjhjLTAuMi0xLjEtMC4yLTIuNDgtMC4yNC0zLjEzaC0wLjA4Yy0xLjI2LDIuMzItMy45OSwzLjYyLTYuNDcsMy42MiAgICBjLTMuNywwLTcuMzItMi4yNC03LjMyLTYuMjNjMC0zLjEzLDEuNS00Ljk2LDMuNTgtNS45OGMyLjA3LTEuMDIsNC43Ni0xLjIyLDcuMDQtMS4yMmgzLjAxYzAtMy4zOC0xLjUxLTQuNTItNC43Mi00LjUyICAgIGMtMi4zMiwwLTQuNjQsMC45LTYuNDcsMi4yOEwxNzcuOTgsMTAuODggTTE4NC4zNywyNy4yNGMxLjY3LDAsMi45Ny0wLjczLDMuODMtMS44N2MwLjg5LTEuMTgsMS4xNC0yLjY5LDEuMTQtNC4zMWgtMi4zNiAgICBjLTIuNDQsMC02LjA2LDAuNDEtNi4wNiwzLjYyQzE4MC45MSwyNi40NywxODIuNDIsMjcuMjQsMTg0LjM3LDI3LjI0eiIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE5Ny45Myw5Ljc5aDUuMTd2Mi44NWgwLjA4YzEuNzEtMi40LDQuMDMtMy4zNCw2Ljg4LTMuMzRjNC45NiwwLDcuMTIsMy41LDcuMTIsOC4yMnYxMy4yM2gtNS40NVYxOS41NSAgICBjMC0yLjU2LTAuMDQtNi4wMi0zLjU0LTYuMDJjLTMuOTUsMC00LjgsNC4yNy00LjgsNi45NnYxMC4yNWgtNS40NVY5Ljc5Ii8+ICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjMzLjgsMTQuMThjLTEuNjctMC41Ny0yLjg5LTAuOS00Ljg4LTAuOWMtMS40NiwwLTMuMjEsMC41My0zLjIxLDIuMzJjMCwzLjM0LDkuNDgsMS4yMiw5LjQ4LDguNzkgICAgYzAsNC44OC00LjM2LDYuODQtOC43OSw2Ljg0Yy0yLjA4LDAtNC4xOS0wLjM3LTYuMTgtMC44OWwwLjMzLTQuNDhjMS43MSwwLjg2LDMuNSwxLjM4LDUuMzcsMS4zOGMxLjM4LDAsMy41OC0wLjUzLDMuNTgtMi41NiAgICBjMC00LjExLTkuNDgtMS4zLTkuNDgtOC44N2MwLTQuNTIsMy45NS02LjUxLDguMjItNi41MWMyLjU2LDAsNC4yMywwLjQxLDUuOTQsMC43N0wyMzMuOCwxNC4xOCIvPiAgPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIzNy40OSw5Ljc5aDUuNDV2MjAuOTZoLTUuNDVWOS43OSBNMjM3LjQ5LDEuOTdoNS40NXY1LjIxaC01LjQ1VjEuOTd6Ii8+ICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQ5LjM0LDEzLjc3aC00LjAzVjkuNzloNC4wM1Y1LjU5bDUuNDUtMS43NXY1Ljk0aDQuODR2My45OWgtNC44NHY5Ljc3YzAsMS43OSwwLjQ5LDMuNDYsMi41NiwzLjQ2ICAgIGMwLjk4LDAsMS45MS0wLjIsMi40OC0wLjU3bDAuMTYsNC4zMWMtMS4xNCwwLjMzLTIuNCwwLjQ5LTQuMDMsMC40OWMtNC4yNywwLTYuNjMtMi42NC02LjYzLTYuNzlWMTMuNzciLz48L2c+PC9zdmc+');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   height: 25px;
+   width: 165px;
+   display: block;
+   margin: 20px 0 0 20px;
+   position: fixed;
+   }
+
+   #burger {
+     background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20%20viewBox%3D%220%200%2024%2021%22%20enable-background%3D%22new%200%200%2024%2021%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2224%22%20height%3D%2221%22%3E%3Cg%3E%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%223%22%2F%3E%20%20%3Crect%20x%3D%220%22%20y%3D%229%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%223%22%2F%3E%20%20%3Crect%20x%3D%220%22%20y%3D%2218%22%20fill%3D%22%23FFFFFF%22%20width%3D%2224%22%20height%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+     background-repeat: no-repeat;
+     position: absolute;
+     right: 0;
+     width: 75px;
+     height: 60px;
+     background-size: 24px 21px;
+     background-position: 26px 19px;
+     background-color: transparent;
+     border: 0;
+   }
+
+   .nav-horizontal-links {
+     display: none;
+   }
+
+   #vertical-collapsible-menu {
+     display: none;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
